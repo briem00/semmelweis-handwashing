@@ -17,7 +17,7 @@ df = pd.read_csv("yearly_deaths_by_clinic-1.csv")
 st.subheader("Raw Data Preview")
 st.dataframe(df)
 
-df["death_rate"] = df["deaths"] / df["births"]
+df["death_rate"] = df["Deaths"] / df["Birth"]
 
 st.subheader("Death Rate by Year and Clinic")
 chart = alt.Chart(df).mark_line(point=True).encode(
